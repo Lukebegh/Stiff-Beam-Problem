@@ -351,8 +351,3 @@ elif demo==0:
     stiffbeam(S,T,L,m,method,f)
 
 
-#Thank you for taking the time to read, and we wish you the best with using our code
-#Best,
-#Sonja Eberle, Lucas Beghein
-
-

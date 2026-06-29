@@ -1,16 +1,15 @@
 # Stiff Beam Problem
 
-A voluntary exercise to deepen understanding of numerical methods for stiff ODEs covered in lectures as part of Master's degree. In line with this purpose, the code was written without the aid of AI to be as simple and clear as possible so it is not designed to be efficient!
+A voluntary project written AI-free by Lucas Beghein and Sonja Eberle to deepen understanding of numerical methods for stiff ODEs covered in lectures. The code simulates the motion of an elastic, inextensible beam subjected to a time-varying external force, and compares the performance of six Runge–Kutta methods across a wide range of step sizes — from blunt explicit schemes requiring tens of thousands of steps, to an implicit method that resolves the motion in as few as ten.
 
 ---
 
 ## The Problem
 
-A clamped elastic beam of length L is described by its deflection angle θ(s, t), where s ∈ [0, 1] is the arc length and t is time. A force is applied at the free tip for the first π time units:
+A clamped elastic beam of length L is described by its deflection angle θ(s, t), where s ∈ [0, 1] is the arc length and t is time. A force F(t) = (-α(t), α(t))ᵀ is applied at the free tip for the first π time units, where
 
-$$
-F(t) = \begin{pmatrix} -\alpha(t) \\ \alpha(t) \end{pmatrix}, \qquad \alpha(t) = \begin{cases} 1.5\sin^2(t) & 0 \leq t \leq \pi \\ 0 & t > \pi \end{cases}
-$$
+- α(t) = 1.5 sin²(t) for 0 ≤ t ≤ π
+- α(t) = 0 for t > π
 
 After spatial semi-discretisation into S segments, the deflection angles θ₁, …, θ_S satisfy the coupled second-order ODE system
 

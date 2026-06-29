@@ -1,6 +1,6 @@
 # Stiff Beam Problem
 
-A voluntary project written AI-free by Lucas Beghein and Sonja Eberle to deepen understanding of numerical methods for stiff ODEs covered in lectures. The code simulates the motion of an elastic, inextensible beam subjected to a time-varying external force, and compares the performance of six Runge–Kutta methods across a wide range of step sizes — from blunt explicit schemes requiring tens of thousands of steps, to an implicit method that resolves the motion in as few as ten.
+A voluntary exercise to deepen understanding of numerical methods for stiff ODEs covered in lectures as part of Master's degree. In line with this purpose, the code was written without the aid of AI to be as simple and clear as possible so it is not designed to be efficient!
 
 ---
 

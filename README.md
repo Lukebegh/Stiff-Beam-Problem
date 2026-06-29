@@ -6,12 +6,10 @@ A voluntary exercise to deepen understanding of numerical methods for stiff ODEs
 
 ## The Problem
 
-A clamped elastic beam of length L is described by its deflection angle θ(s, t), where s ∈ [0, 1] is the arc length and t is time. A force F(t) = (-α(t), α(t))ᵀ is applied at the free tip for the first π time units, where
+A clamped elastic beam of length L is described by its deflection angle θ(s, t), where s ∈ [0, 1] is the arc length and t is time. A force 
+F(t) = (-α(t), α(t))ᵀ, with α(t) = 1.5 sin²(t) for 0 ≤ t ≤ π and α(t) = 0 for t > π, is applied at the free tip.
 
-- α(t) = 1.5 sin²(t) for 0 ≤ t ≤ π
-- α(t) = 0 for t > π
-
-After spatial semi-discretisation into S segments, the deflection angles θ₁, …, θ_S satisfy the coupled second-order ODE system
+After spatial semi-discretisation into S segments, the deflection angles θ₁, …, θₛ satisfy the coupled second-order ODE system
 
 $$
 \ddot{\theta} = Cv + DC^{-1}(Dv + \dot{\theta}^2)
